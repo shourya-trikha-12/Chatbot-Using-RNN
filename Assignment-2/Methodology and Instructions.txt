@@ -1,0 +1,73 @@
+Methodology :-
+1. Preprocessing Steps:
+Data Cleaning:
+Remove rows with empty or missing entries.
+Convert text to lowercase to ensure uniformity.
+
+Label Encoding:
+Convert categorical labels into numerical format using Label Encoding techniques.
+
+Tokenization:
+Tokenize the text data into words or subwords.
+
+Lemmatization:
+Reduce words to their root forms using lemmatization.
+
+Stopword Removal:
+Eliminate common stopwords that do not add meaningful information.
+
+
+2. Model Architecture Implementation:
+Decision Tree:
+Implement Decision Tree Classifier for text classification.
+
+Logistic Regression:
+Utilize Logistic Regression model for multiclass text classification.
+
+Naive Bayes:
+Implement Multinomial Naive Bayes Classifier for text classification.
+
+Linear SVM:
+Implement Support Vector Machine Classifier with a linear kernel.
+
+Deep Learning (LSTMs):
+Utilize LSTM (Long Short-Term Memory) neural network for text classification.
+
+
+3. Model Training and Evaluation:
+Training:
+Train each model using the preprocessed training dataset.
+Evaluation:
+Evaluate the performance of each model on the test dataset.
+Metrics: Calculate accuracy, precision, recall, and F1-score for model evaluation.
+
+
+4. Model Selection:
+Comparative Analysis:
+Compare the performance metrics of all implemented models.
+Select the model with the highest accuracy or the most suitable for the task.(in this case Linear SVM)
+
+
+5. Model Fine-Tuning:
+Hyperparameter Tuning:
+Fine-tune the selected model to enhance its classification accuracy
+
+
+
+Instructions to run the test dataset:
+1) Load the Saved Model:
+Load the previously saved model using joblib.load:
+import joblib
+
+# Load the saved SVM model from file
+loaded_SVM = joblib.load('svm_model.pkl')
+
+2) Prepare Test Data:
+Prepare your test data or text on which you want to perform predictions. Ensure that the test data is preprocessed in the same way as the training data (e.g., tokenized, cleaned, vectorized, encoded, etc.).
+
+3) Perform Predictions:
+Use the loaded model to make predictions on the test data:
+predictions = loaded_SVM.predict(test_data)
+
+4) Evaluate Predictions :
+If you have ground truth labels for your test data, you can evaluate the predictions' accuracy or any other relevant metrics.
